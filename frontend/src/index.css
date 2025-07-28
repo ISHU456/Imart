@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+body {
+  background: #F8F9FA;
+  color: #22223B;
+}
+
+*{
+  font-family: "Outfit", sans-serif;
+}
+
+@theme{
+  /* --color-primary:#4fbf8b; */
+  /* --color-primary:#5b28f2; */
+  --color-primary:#3B82F6; 
+  --color-secondary:#8B5CF6;
+  --color-accent:#F59E0B;
+  --color-bg:#F8F9FA;
+  --color-surface:#FFFFFF;
+  --color-text-primary:#22223B;
+  --color-text-secondary:#495057;
+  --color-primary-dull:#1D4ED8;
+}
+
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+
+/* Button Gradients */
+.btn-gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dull) 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient-primary:hover {
+  background: linear-gradient(135deg, var(--color-primary-dull) 0%, var(--color-primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.btn-gradient-accent {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #D97706 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient-accent:hover {
+  background: linear-gradient(135deg, #D97706 0%, var(--color-accent) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+}
+
+.btn-gradient-secondary {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #7C3AED 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient-secondary:hover {
+  background: linear-gradient(135deg, #7C3AED 0%, var(--color-secondary) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+}
+
+/* Custom Slider Styles */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #e5e7eb;
+  outline: none;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.slider:hover {
+  background: #d1d5db;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: var(--color-primary-dull);
+  transform: scale(1.1);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+.slider::-moz-range-thumb:hover {
+  background: var(--color-primary-dull);
+  transform: scale(1.1);
+}
